@@ -13,6 +13,9 @@
 		B45C4B702215E8110050C797 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45C4B6E2215E8110050C797 /* LaunchScreen.storyboard */; };
 		B45C4B732215E8110050C797 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B45C4B722215E8110050C797 /* main.m */; };
 		B45C4B812215F4210050C797 /* CRMPost.m in Sources */ = {isa = PBXBuildFile; fileRef = B45C4B802215F4210050C797 /* CRMPost.m */; };
+		B45C4B852215F7870050C797 /* CRMPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45C4B842215F7870050C797 /* CRMPostController.m */; };
+		B45C4B89221611AD0050C797 /* PostListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C4B88221611AD0050C797 /* PostListTableViewController.swift */; };
+		B45C4B8C221614810050C797 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C4B8B221614810050C797 /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		B45C4B722215E8110050C797 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B45C4B7F2215F4210050C797 /* CRMPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRMPost.h; sourceTree = "<group>"; };
 		B45C4B802215F4210050C797 /* CRMPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRMPost.m; sourceTree = "<group>"; };
+		B45C4B832215F7870050C797 /* CRMPostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRMPostController.h; sourceTree = "<group>"; };
+		B45C4B842215F7870050C797 /* CRMPostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRMPostController.m; sourceTree = "<group>"; };
+		B45C4B87221611AC0050C797 /* RedditiOS24Take2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RedditiOS24Take2-Bridging-Header.h"; sourceTree = "<group>"; };
+		B45C4B88221611AD0050C797 /* PostListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewController.swift; sourceTree = "<group>"; };
+		B45C4B8B221614810050C797 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +66,10 @@
 		B45C4B622215E8110050C797 /* RedditiOS24Take2 */ = {
 			isa = PBXGroup;
 			children = (
+				B45C4B87221611AC0050C797 /* RedditiOS24Take2-Bridging-Header.h */,
 				B45C4B822215F4270050C797 /* Model */,
+				B45C4B862215F7980050C797 /* Model Controllers */,
+				B45C4B8A221611BE0050C797 /* View Controllers */,
 				B45C4B7A2215F3D30050C797 /* Storyboard */,
 				B45C4B792215EA870050C797 /* Resources */,
 			);
@@ -96,6 +107,24 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		B45C4B862215F7980050C797 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B45C4B832215F7870050C797 /* CRMPostController.h */,
+				B45C4B842215F7870050C797 /* CRMPostController.m */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		B45C4B8A221611BE0050C797 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B45C4B88221611AD0050C797 /* PostListTableViewController.swift */,
+				B45C4B8B221614810050C797 /* PostTableViewCell.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,6 +156,7 @@
 				TargetAttributes = {
 					B45C4B5F2215E8110050C797 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -168,7 +198,10 @@
 			files = (
 				B45C4B732215E8110050C797 /* main.m in Sources */,
 				B45C4B652215E8110050C797 /* AppDelegate.m in Sources */,
+				B45C4B852215F7870050C797 /* CRMPostController.m in Sources */,
+				B45C4B89221611AD0050C797 /* PostListTableViewController.swift in Sources */,
 				B45C4B812215F4210050C797 /* CRMPost.m in Sources */,
+				B45C4B8C221614810050C797 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AH8N698PRG;
 				INFOPLIST_FILE = "$(SRCROOT)/RedditiOS24Take2/Resources/Info.plist";
@@ -319,6 +353,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Cameron-Milliken.RedditiOS24Take2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RedditiOS24Take2/RedditiOS24Take2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -327,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AH8N698PRG;
 				INFOPLIST_FILE = "$(SRCROOT)/RedditiOS24Take2/Resources/Info.plist";
@@ -336,6 +374,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Cameron-Milliken.RedditiOS24Take2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RedditiOS24Take2/RedditiOS24Take2-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

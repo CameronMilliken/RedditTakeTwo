@@ -12,14 +12,19 @@
         <!--Posts-->
         <scene sceneID="NNU-AT-ppN">
             <objects>
-                <tableViewController id="wGE-xF-0z3" sceneMemberID="viewController">
+                <tableViewController id="wGE-xF-0z3" customClass="PostListTableViewController" customModule="RedditiOS24Take2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OkH-Py-NM1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search For A Subreddit..." id="uiM-er-Fcz">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="147" id="Wvm-eX-Abk">
-                                <rect key="frame" x="0.0" y="28" width="375" height="147"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="147" id="Wvm-eX-Abk" customClass="PostTableViewCell" customModule="RedditiOS24Take2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="147"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wvm-eX-Abk" id="QFZ-mx-NVO">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="146.5"/>
@@ -67,6 +72,12 @@
                                         <constraint firstItem="fC2-XS-eR5" firstAttribute="top" secondItem="QFZ-mx-NVO" secondAttribute="top" constant="8" id="t14-8D-QMR"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="commentCountLabel" destination="bws-zf-sFf" id="3vJ-bq-Oap"/>
+                                    <outlet property="redditImageView" destination="M5A-VH-WAJ" id="nKx-7p-KfO"/>
+                                    <outlet property="titleLabel" destination="VQj-ee-LKp" id="fJQ-hE-90a"/>
+                                    <outlet property="upVotesLabel" destination="INl-0p-C8H" id="u1W-Vj-OTZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -75,6 +86,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Posts" id="BXO-fL-rAI"/>
+                    <connections>
+                        <outlet property="searchBar" destination="uiM-er-Fcz" id="sEg-v1-iGs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZvZ-yv-pbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
